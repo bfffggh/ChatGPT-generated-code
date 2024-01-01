@@ -5,4 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleButton.addEventListener('click', function () {
         sidebar.classList.toggle('hidden');
     });
+
+    // Add touchstart event for mobile devices
+    toggleButton.addEventListener('touchstart', function (event) {
+        event.preventDefault(); // Prevent the default touch behavior (e.g., scrolling)
+        sidebar.classList.toggle('hidden');
+    });
 });
+
